@@ -22,6 +22,16 @@
             bindings = <&kp PERIOD>;
             key-positions = <37 32>;
         };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <16 19>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <37 16>;
+        };
     };
 
     keymap {
@@ -37,10 +47,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T             &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D      &kp F  &kp G             &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp V  &kp B             &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                         &soft_off  &mo 1         &kp SPACE         &mo 2  &kp RGUI
+&kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T         &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D      &kp F  &kp G         &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp V  &kp B         &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
+                         &soft_off  &mo 1         &mo 3         &mo 2  &kp RGUI
             >;
         };
 
@@ -88,10 +98,10 @@
             //                                              |     |     |     |     |     |
 
             bindings = <
-&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                    &none         &none         &none         &none         &none         &none
-&none            &none            &none            &none            &none   &none                    &sys_reset    &none         &none         &none         &none         &none
-                                                   &trans           &trans                   &tog 3                &trans        &trans
+&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4    &bt BT_CLR
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                   &none         &none         &none              &none            &none           &none
+&none            &none            &none            &none            &none   &none                   &sys_reset    &kp C_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &studio_unlock  &soft_off
+                                                   &trans           &trans                   &none                &trans        &trans
             >;
         };
     };
